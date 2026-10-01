@@ -1,448 +1,125 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#151515" />
-  <meta name="description" content="Экспертный круглый стол бизнес-журнала «ТОЧКА ОПОРЫ»: право и бизнес, судебная практика и развитие деловых отношений." />
-  <title>Право и бизнес — круглый стол «ТОЧКИ ОПОРЫ»</title>
-  <style>
-    :root{
-      --ink:#161616;--muted:#6c6c6c;--paper:#f4f1ec;--white:#fff;--red:#a71920;--red2:#7e1116;--line:#ddd7cf;--dark:#111214;
-      --radius:22px;--shadow:0 20px 55px rgba(0,0,0,.12);
-    }
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
-    a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.wrap{width:min(1160px,calc(100% - 36px));margin:auto}
-    .top{position:sticky;top:0;z-index:40;background:rgba(244,241,236,.9);backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,0,0,.06)}
-    .nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.04em}.brandmark{background:var(--red);color:#fff;padding:6px 10px;font-family:Georgia,serif;font-weight:700;letter-spacing:.02em}.brand small{display:block;font-weight:500;color:var(--muted);letter-spacing:0;font-size:11px;text-transform:uppercase}.navlinks{display:flex;gap:22px;font-size:14px;color:#363636}.navlinks a:hover{color:var(--red)}
-    .hero{background:linear-gradient(135deg,#0d0e10 0%,#191a1e 62%,#2a1013 100%);color:#fff;padding:74px 0 42px;overflow:hidden;position:relative}.hero:before{content:"";position:absolute;inset:auto -10% -38% auto;width:520px;height:520px;border:1px solid rgba(255,255,255,.08);border-radius:50%}.hero:after{content:"";position:absolute;right:8%;top:10%;width:220px;height:220px;background:radial-gradient(circle,rgba(167,25,32,.34),transparent 68%);filter:blur(3px)}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:#e8c6c8;font-size:12px;text-transform:uppercase;letter-spacing:.15em;font-weight:700}.eyebrow:before{content:"";width:28px;height:1px;background:#d24b51}.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:52px;align-items:end;position:relative;z-index:1}.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(43px,6vw,78px);line-height:.98;margin:20px 0 24px;max-width:900px;font-weight:500}.hero h1 span{color:#d44a50}.lead{max-width:760px;font-size:18px;color:#d3d3d3}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 19px;border-radius:999px;font-weight:700;font-size:14px;border:1px solid transparent;transition:.2s}.btn.primary{background:var(--red);color:white}.btn.primary:hover{background:#c72a31;transform:translateY(-1px)}.btn.ghost{border-color:rgba(255,255,255,.22);color:#fff}.btn.ghost:hover{border-color:#fff}.hero-card{border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:25px;background:rgba(255,255,255,.055);backdrop-filter:blur(8px)}.hero-card strong{font-family:Georgia,serif;font-size:34px;display:block}.hero-card p{margin:2px 0 18px;color:#bfbfbf;font-size:14px}.hero-card .status{padding-top:18px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;color:#e7c8ca}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#d14b50;margin-right:7px}
-    .photo-strip{display:grid;grid-template-columns:1.25fr .75fr 1fr;gap:10px;margin-top:44px;position:relative;z-index:2}.photo-strip figure,.gallery figure{margin:0;overflow:hidden;background:#2a2a2a;position:relative}.photo-strip figure{height:230px;border-radius:16px}.photo-strip img,.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease;image-rendering:auto}.photo-strip figure:hover img,.gallery figure:hover img{transform:scale(1.035)}.cap{position:absolute;left:12px;bottom:10px;background:rgba(0,0,0,.58);color:#fff;font-size:11px;padding:5px 8px;border-radius:8px;backdrop-filter:blur(8px)}
-    section{padding:82px 0}.section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:34px}.section-head h2{font-family:Georgia,serif;font-size:clamp(34px,5vw,54px);line-height:1.05;margin:0;font-weight:500}.section-head p{max-width:520px;margin:0;color:var(--muted)}
-    .intro{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px}.panel h3{font-size:21px;margin:0 0 10px}.panel p{margin:0;color:var(--muted)}.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.pill{border:1px solid var(--line);background:#faf8f5;padding:7px 10px;border-radius:999px;font-size:12px}
-    .dark{background:var(--dark);color:#fff}.dark .section-head p{color:#aaa}.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tier{border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:27px;background:#17181b;min-height:292px;display:flex;flex-direction:column}.tier.featured{background:linear-gradient(145deg,#2b1214,#17181b);border-color:rgba(204,59,65,.5)}.tier .label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#aaa}.tier h3{font-family:Georgia,serif;font-size:28px;margin:10px 0}.price{font-size:38px;font-weight:800;margin:4px 0 18px}.price small{font-size:13px;color:#aaa;font-weight:500}.tier ul{padding:0;margin:0;list-style:none;color:#c8c8c8;font-size:14px}.tier li{padding:6px 0 6px 18px;position:relative}.tier li:before{content:"•";position:absolute;left:0;color:#d34b51}.tier .note{margin-top:auto;padding-top:18px;color:#8f8f8f;font-size:12px}
-    .program{display:grid;grid-template-columns:180px 1fr;gap:0;border-top:1px solid var(--line)}.slot{display:contents}.slot-time,.slot-body{padding:22px 0;border-bottom:1px solid var(--line)}.slot-time{font-weight:800;color:var(--red);font-size:14px}.slot-body h3{margin:0 0 5px;font-size:18px}.slot-body p{margin:0;color:var(--muted)}
-    .industries{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.industry{border-radius:var(--radius);background:#fff;border:1px solid var(--line);padding:26px}.industry .n{font-family:Georgia,serif;color:var(--red);font-size:37px}.industry h3{margin:12px 0 8px}.industry p{margin:0;color:var(--muted);font-size:14px}
-    .speaker-placeholder{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}.speaker-placeholder h3{font-family:Georgia,serif;font-size:30px;margin:0 0 8px}.speaker-placeholder p{margin:0;color:var(--muted)}.badge{border:1px solid #e4bfc1;color:var(--red2);background:#fff3f3;border-radius:999px;padding:10px 14px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.gallery figure{height:245px;border-radius:14px}.gallery .wide{grid-column:span 2}.gallery-source{margin-top:12px;color:var(--muted);font-size:12px}
-    .cta{background:linear-gradient(135deg,#95151b,#651014);color:#fff;border-radius:30px;padding:46px;display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center;box-shadow:var(--shadow)}.cta h2{font-family:Georgia,serif;font-size:42px;line-height:1.05;margin:0 0 12px;font-weight:500}.cta p{margin:0;color:#f1d9da}.contactbox{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:22px}.contactbox strong{display:block;font-size:18px}.contactbox a{display:block;margin-top:7px;color:#fff}.contactbox small{display:block;margin-top:10px;color:#e2bfc1}
-    footer{padding:34px 0 48px;color:#676767;font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:24px}.foot strong{color:#222}
-    @media(max-width:860px){.navlinks{display:none}.hero-grid,.intro,.cta{grid-template-columns:1fr}.hero{padding-top:56px}.hero-card{max-width:480px}.photo-strip{grid-template-columns:1fr 1fr}.photo-strip figure:first-child{grid-column:span 2}.tiers,.industries{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:14px}.gallery{grid-template-columns:1fr 1fr}.gallery .wide{grid-column:span 2}.program{grid-template-columns:95px 1fr}.speaker-placeholder{grid-template-columns:1fr}.badge{justify-self:start}}
-    @media(max-width:560px){.wrap{width:min(100% - 24px,1160px)}.nav{height:62px}.brand small{display:none}.hero h1{font-size:43px}.lead{font-size:16px}.photo-strip{grid-template-columns:1fr}.photo-strip figure,.photo-strip figure:first-child{grid-column:auto;height:200px}.gallery{grid-template-columns:1fr}.gallery .wide{grid-column:auto}.gallery figure{height:235px}.program{display:block}.slot{display:block;border-bottom:1px solid var(--line);padding:18px 0}.slot-time,.slot-body{border:0;padding:0}.slot-body{padding-top:6px}.cta{padding:30px}.cta h2{font-size:34px}section{padding:62px 0}}
-  
-    .archive-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:44px;position:relative;z-index:2}
-    .archive-card{position:relative;min-height:330px;border-radius:18px;overflow:hidden;background:#242428;border:1px solid rgba(255,255,255,.1);box-shadow:0 14px 40px rgba(0,0,0,.22)}
-    .archive-card img{width:100%;height:100%;min-height:330px;object-fit:cover;object-position:center top;transition:transform .4s ease}
-    .archive-card:hover img{transform:scale(1.025)}
-    .archive-card:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.88) 0%,rgba(0,0,0,.18) 58%,rgba(0,0,0,.05) 100%)}
-    .archive-copy{position:absolute;z-index:2;left:18px;right:18px;bottom:17px}
-    .archive-copy .year{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#f0b8bb;font-weight:800}
-    .archive-copy h3{font-family:Georgia,serif;font-size:21px;line-height:1.08;margin:6px 0 7px;color:#fff}
-    .archive-copy p{font-size:12px;color:#d5d5d5;margin:0}
-    .archive-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-    .archive-link{display:block;background:#fff;border:1px solid var(--line);border-radius:18px;padding:23px;transition:.2s}
-    .archive-link:hover{transform:translateY(-2px);box-shadow:0 14px 35px rgba(0,0,0,.07);border-color:#c8b9b9}
-    .archive-link .meta{font-size:11px;color:var(--red);font-weight:800;letter-spacing:.1em;text-transform:uppercase}
-    .archive-link h3{font-size:19px;line-height:1.2;margin:8px 0 8px}
-    .archive-link p{margin:0;color:var(--muted);font-size:14px}
-    .proofline{display:flex;gap:24px;flex-wrap:wrap;margin-top:26px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
-    .proofline strong{color:var(--ink)}
-    @media(max-width:860px){.archive-strip{grid-template-columns:1fr 1fr}.archive-card:first-child{grid-column:span 2}.archive-list{grid-template-columns:1fr}}
-    @media(max-width:560px){.archive-strip{grid-template-columns:1fr}.archive-card,.archive-card:first-child{grid-column:auto;min-height:310px}.archive-card img{min-height:310px}.archive-list{grid-template-columns:1fr}}
-
-  
-    .audience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .audience-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
-    .audience-card .num{font-family:Georgia,serif;color:var(--red);font-size:32px}
-    .audience-card h3{margin:10px 0 7px;font-size:18px}
-    .audience-card p{margin:0;color:var(--muted);font-size:14px}
-
-    .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .why-card{background:#151619;color:#fff;border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:24px}
-    .why-card .kicker{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#d68a8d;font-weight:800}
-    .why-card h3{font-size:18px;margin:9px 0}
-    .why-card p{margin:0;color:#aaa;font-size:14px}
-
-    .compare{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .compare-card{border-radius:20px;padding:28px;border:1px solid var(--line);background:#fff}
-    .compare-card.highlight{background:#161719;color:#fff;border-color:#2d2e31}
-    .compare-card h3{font-family:Georgia,serif;font-size:28px;margin:0 0 14px}
-    .compare-card ul{margin:0;padding:0;list-style:none}
-    .compare-card li{padding:8px 0 8px 20px;position:relative;color:var(--muted)}
-    .compare-card.highlight li{color:#cfcfcf}
-    .compare-card li:before{content:"—";position:absolute;left:0;color:var(--red)}
-
-    .result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .result-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
-    .result-card strong{display:block;font-size:17px;margin-bottom:7px}
-    .result-card p{margin:0;color:var(--muted);font-size:14px}
-
-    .faq{display:grid;gap:10px}
-    details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:0 20px}
-    summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:800}
-    summary::-webkit-details-marker{display:none}
-    details p{margin:0 0 18px;color:var(--muted);font-size:14px;max-width:880px}
-
-    .mini-cta{display:flex;justify-content:space-between;align-items:center;gap:20px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-top:28px}
-    .mini-cta strong{font-size:18px}
-    .mini-cta p{margin:4px 0 0;color:var(--muted);font-size:14px}
-    .btn.light{background:#fff;color:var(--ink);border-color:var(--line)}
-    .btn.darkbtn{background:#17181b;color:#fff}
-
-    @media(max-width:980px){.audience-grid,.why-grid,.result-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:680px){.audience-grid,.why-grid,.result-grid,.compare{grid-template-columns:1fr}.mini-cta{display:block}.mini-cta .btn{margin-top:14px;width:100%}}
-
-  
-    .application-wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:24px;align-items:start}
-    .application-info{background:#17181b;color:#fff;border-radius:24px;padding:30px;position:sticky;top:92px}
-    .application-info h2{font-family:Georgia,serif;font-size:38px;line-height:1.05;margin:0 0 14px;font-weight:500}
-    .application-info p{color:#b9b9b9;margin:0 0 20px}
-    .application-info .contact-line{display:block;padding:10px 0;border-top:1px solid rgba(255,255,255,.1);font-size:15px}
-    .application-info .contact-line:first-of-type{margin-top:18px}
-    .application-form{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px}
-    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .field{display:flex;flex-direction:column;gap:7px}
-    .field.full{grid-column:1/-1}
-    .field label{font-size:13px;font-weight:800}
-    .field input,.field select,.field textarea{width:100%;font:inherit;border:1px solid #d8d2ca;border-radius:12px;background:#fbfaf8;padding:13px 14px;outline:none;color:var(--ink)}
-    .field textarea{min-height:118px;resize:vertical}
-    .field input:focus,.field select:focus,.field textarea:focus{border-color:#9f1a21;box-shadow:0 0 0 3px rgba(167,25,32,.08)}
-    .consent{display:flex;gap:10px;align-items:flex-start;margin:17px 0;color:var(--muted);font-size:12px}
-    .consent input{margin-top:3px}
-    .consent a{text-decoration:underline}
-    .submit-btn{width:100%;border:0;cursor:pointer;background:var(--red);color:#fff;border-radius:999px;padding:15px 18px;font:inherit;font-weight:800}
-    .submit-btn:hover{background:#c72a31}
-    .form-note{margin-top:11px;color:var(--muted);font-size:11px}
-    .success-note{display:none;background:#edf7ef;border:1px solid #b8d8bf;color:#275c31;padding:12px 14px;border-radius:12px;margin-bottom:16px;font-size:14px}
-    .legal-footer{margin-top:20px;padding-top:20px;border-top:1px solid var(--line);font-size:10px;line-height:1.55;color:#818181}
-    .legal-footer a{text-decoration:underline}
-    @media(max-width:860px){.application-wrap{grid-template-columns:1fr}.application-info{position:static}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
-
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#151214">
+<title>Круглый стол «Право × Бизнес» для юристов и бизнеса | ТОЧКА ОПОРЫ</title>
+<meta name="description" content="Экспертный круглый стол журнала «ТОЧКА ОПОРЫ»: частное право, судебная практика и задачи бизнеса. Онлайн в Яндекс Телемосте. Программа, форматы участия и заявка.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://grachevana-lgtm.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="ТОЧКА ОПОРЫ · Право × Бизнес">
+<meta property="og:title" content="Право × Бизнес — экспертный круглый стол">
+<meta property="og:description" content="Юридическая наука, практика и реальные задачи бизнеса. Закрытая онлайн-дискуссия бизнес-журнала «ТОЧКА ОПОРЫ». Дата и состав экспертов согласовываются.">
+<meta property="og:url" content="https://grachevana-lgtm.github.io/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Право × Бизнес | ТОЧКА ОПОРЫ">
+<meta name="twitter:description" content="Закрытый экспертный круглый стол для юристов и руководителей бизнеса. Программа и форматы участия.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23151214'/%3E%3Cpath d='M18 18L46 46M46 18L18 46' stroke='%23ff626c' stroke-width='9'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://grachevana-lgtm.github.io/#organization","name":"Бизнес-журнал «ТОЧКА ОПОРЫ»","url":"https://www.to-inform.ru/","telephone":"+74957448688","email":"to@to-inform.ru"},{"@type":"WebSite","@id":"https://grachevana-lgtm.github.io/#website","url":"https://grachevana-lgtm.github.io/","name":"Право × Бизнес — ТОЧКА ОПОРЫ","inLanguage":"ru-RU","publisher":{"@id":"https://grachevana-lgtm.github.io/#organization"}},{"@type":"WebPage","@id":"https://grachevana-lgtm.github.io/#webpage","url":"https://grachevana-lgtm.github.io/","name":"Круглый стол «Право × Бизнес» для юристов и бизнеса","description":"Экспертный круглый стол бизнес-журнала «ТОЧКА ОПОРЫ»: частное право, судебная практика и деловые отношения.","inLanguage":"ru-RU","isPartOf":{"@id":"https://grachevana-lgtm.github.io/#website"},"publisher":{"@id":"https://grachevana-lgtm.github.io/#organization"}}]}</script>
 </head>
 <body>
-  <header class="top">
-    <div class="wrap nav">
-      <a class="brand" href="#top"><span class="brandmark">ТОЧКА ОПОРЫ</span><span><small>экспертный проект</small>Право × Бизнес</span></a>
-      <nav class="navlinks"><a href="#concept">О проекте</a><a href="#participants">Участие</a><a href="#program">Программа</a><a href="#gallery">Архив</a><a href="#contact">Контакты</a></nav>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="wrap">
-        <div class="hero-grid">
-          <div>
-            <div class="eyebrow">Закрытый экспертный круглый стол бизнес-журнала «ТОЧКА ОПОРЫ»</div>
-            <h1>Право и бизнес: <span>ключевые тенденции</span> частного права, судебной практики и деловых отношений</h1>
-            <p class="lead">Закрытая экспертная дискуссия, где представители юридической науки, практикующие юристы и руководители бизнеса обсуждают не абстрактные нормы, а реальные правовые риски, судебные подходы и решения для компаний.</p>
-            <div class="actions"><a class="btn primary" href="#participants">Выбрать формат участия</a><a class="btn ghost" href="#program">Посмотреть программу</a></div>
-          </div>
-          <aside class="hero-card">
-            <strong>Онлайн · Яндекс Телемост</strong><p>Закрытая встреча с записью, модерируемой дискуссией, техническим сопровождением и итоговым редакционным материалом.</p>
-            <strong>≈ 3 часа</strong><p>Академический блок, практические выступления и общая дискуссия.</p>
-            <div class="status"><span class="dot"></span>Состав приглашённых экспертов формируется</div>
-          </aside>
-        </div>
-        <div class="archive-strip" aria-label="Юридические публикации в архиве журнала">
-          <a class="archive-card" href="https://www.to-inform.ru/index.php/arkhiv/item/zakon-o-prioritete-russkogo-iazyka-chto-izmenilos-dlia-biznesa-s-1-marta-2026" target="_blank" rel="noopener">
-            <img loading="eager" src="https://www.to-inform.ru/images/articles-2026/307_22.jpg" alt="Анна Стратулат — юридическая публикация в журнале ТОЧКА ОПОРЫ">
-            <div class="archive-copy"><div class="year">№307 · 2026</div><h3>Анна Стратулат</h3><p>Руководитель юридической компании Stratulat</p></div>
-          </a>
-          <a class="archive-card" href="https://www.to-inform.ru/index.php/arkhiv/item/zapret-vyvesok-na-inostrannom-iazyke-registratciia-brendov-i-novoe-regulirovanie-kak-biznesu-sebia-zashchitit" target="_blank" rel="noopener">
-            <img loading="lazy" src="https://www.to-inform.ru/images/articles-2026/308_19.jpg" alt="Юлия Берестнева — юридическая публикация в журнале ТОЧКА ОПОРЫ">
-            <div class="archive-copy"><div class="year">№308 · 2026</div><h3>Юлия Берестнева</h3><p>Руководитель Патентного бюро «ВЕРИТА»</p></div>
-          </a>
-          <a class="archive-card" href="https://www.to-inform.ru/index.php/arkhiv/item/elizaveta-seleznyoba-advokat-eto-ne-tolko-iurist" target="_blank" rel="noopener">
-            <img loading="lazy" src="https://www.to-inform.ru/images/articles-2023/287_18.jpg" alt="Елизавета Селезнёва — интервью в журнале ТОЧКА ОПОРЫ">
-            <div class="archive-copy"><div class="year">№287 · 2023</div><h3>Елизавета Селезнёва</h3><p>Кандидат юридических наук, адвокат</p></div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="concept">
-      <div class="wrap">
-        <div class="section-head"><h2>Юридическая наука, практика<br>и реальные задачи бизнеса.</h2><p>Круглый стол строится вокруг одной общей темы, но каждый участник раскрывает её со своей профессиональной позиции. В результате получается не серия рекламных докладов, а содержательная дискуссия между академической средой, консультантами и бизнесом.</p></div>
-        <div class="intro">
-          <article class="panel"><h3>Единая тема — разные профессиональные углы</h3><p>За каждым участником закрепляется отдельное направление: корпоративное право и M&A, коммерческие споры, банкротство, строительство и недвижимость, договорное право, интеллектуальная собственность, налоги и другие вопросы, напрямую влияющие на бизнес.</p><div class="pillrow"><span class="pill">корпоративное право</span><span class="pill">M&A</span><span class="pill">арбитраж</span><span class="pill">банкротство</span><span class="pill">недвижимость</span><span class="pill">договорное право</span></div></article>
-          <article class="panel"><h3>Редакционный результат</h3><p>По итогам встречи редакция готовит специальный материал с ключевыми позициями участников. Для спикеров это одновременно экспертное выступление, редакционное упоминание и контент, который можно использовать в собственных профессиональных коммуникациях.</p><div class="pillrow"><span class="pill">публикация</span><span class="pill">видеозапись</span><span class="pill">экспертные цитаты</span><span class="pill">B2B-аудитория</span></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="for-whom" style="padding-top:0">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Кому имеет смысл<br>быть за этим столом</h2>
-          <p>Мы собираем не массовую аудиторию, а участников, которым действительно есть что обсудить друг с другом.</p>
-        </div>
-        <div class="audience-grid">
-          <article class="audience-card"><div class="num">01</div><h3>Партнёрам и руководителям юридических практик</h3><p>Чтобы представить профессиональную позицию, показать экспертизу и войти в прямой диалог с бизнесом.</p></article>
-          <article class="audience-card"><div class="num">02</div><h3>Практикующим юристам</h3><p>Если есть сильная специализация, кейсы и позиция по изменениям судебной практики или регулирования.</p></article>
-          <article class="audience-card"><div class="num">03</div><h3>Собственникам и руководителям бизнеса</h3><p>Чтобы вынести на обсуждение реальные договорные, корпоративные, судебные и регуляторные риски.</p></article>
-          <article class="audience-card"><div class="num">04</div><h3>Руководителям юридических служб</h3><p>Для обмена практикой с внешними консультантами и обсуждения проблем, с которыми сталкивается бизнес изнутри.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="participants" class="dark">
-      <div class="wrap">
-        <div class="section-head"><h2>Форматы участия</h2><p>Количество коммерческих участников ограничено: мы распределяем темы заранее, чтобы не было дублирования и чтобы каждый спикер имел понятную профессиональную роль в общей дискуссии.</p></div>
-        <div class="tiers">
-          <article class="tier"><div class="label">Приглашённые эксперты</div><h3>Юридическая наука</h3><div class="price">по приглашению</div><ul><li>профессора и исследователи</li><li>академический взгляд на общую тему</li><li>индивидуально согласованная тема</li><li>участие в общей дискуссии</li></ul><div class="note">Состав приглашённых экспертов находится на стадии согласования.</div></article>
-          <article class="tier featured"><div class="label">7–10 мест</div><h3>Юридические компании</h3><div class="price">15 000 ₽ <small>/ компания</small></div><ul><li>1 профильный спикер</li><li>7–8 минут экспертного выступления</li><li>упоминание в итоговом материале</li><li>логотип и представление компании</li><li>участие в общей дискуссии</li></ul><div class="note">За компанией закрепляется отдельное направление, чтобы темы не дублировались.</div></article>
-          <article class="tier"><div class="label">3–4 места</div><h3>Представители бизнеса</h3><div class="price">10 000 ₽ <small>/ участник</small></div><ul><li>реальный кейс или проблема отрасли</li><li>участие в обсуждении с юристами</li><li>упоминание в итоговом материале</li><li>прямой диалог с юридическими экспертами</li></ul><div class="note">Приоритет: строительство, промышленность и энергетика, безопасность и технологии.</div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="dark" style="padding-top:0">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Почему участие —<br>не просто «выступление»</h2>
-          <p>Формат задуман так, чтобы коммерческий участник получил не только 7–8 минут эфира, а полноценное экспертное присутствие в проекте.</p>
-        </div>
-        <div class="why-grid">
-          <article class="why-card"><div class="kicker">Экспертность</div><h3>Своя профессиональная тема</h3><p>Направление закрепляется заранее и не дублируется другим спикером.</p></article>
-          <article class="why-card"><div class="kicker">Аудитория</div><h3>Прямой разговор с бизнесом</h3><p>В дискуссии участвуют представители отраслей, для которых юридические вопросы имеют прикладное значение.</p></article>
-          <article class="why-card"><div class="kicker">Медиа</div><h3>Редакционное продолжение</h3><p>Ключевые позиции участников становятся частью итогового материала «ТОЧКИ ОПОРЫ».</p></article>
-          <article class="why-card"><div class="kicker">Контент</div><h3>Запись и фрагменты</h3><p>Материал круглого стола можно использовать как основу для последующих профессиональных публикаций и коммуникаций.</p></article>
-        </div>
-        <div class="mini-cta"><div><strong>Количество коммерческих мест ограничено.</strong><p>7–10 юридических компаний и 3–4 представителя бизнеса.</p></div><a class="btn primary" href="#contact">Обсудить участие</a></div>
-      </div>
-    </section>
-
-    <section id="program">
-      <div class="wrap">
-        <div class="section-head"><h2>Как проходит круглый стол</h2><p>Точная дата и окончательный состав будут опубликованы после согласования с ключевыми приглашёнными экспертами.</p></div>
-        <div class="program">
-          <div class="slot"><div class="slot-time">00:00–00:07</div><div class="slot-body"><h3>Открытие</h3><p>Приветствие, представление темы, формата, участников и правил дискуссии.</p></div></div>
-          <div class="slot"><div class="slot-time">00:07–01:00</div><div class="slot-body"><h3>Академический блок</h3><p>Выступления 3–4 почётных экспертов. Ориентировочно по 8–10 минут; при большем составе регламент может сокращаться.</p></div></div>
-          <div class="slot"><div class="slot-time">01:00–02:00</div><div class="slot-body"><h3>Практический блок</h3><p>Выступления 7–10 юридических компаний по 5–7 минут. За каждым спикером закрепляется отдельное направление без дублирования тем.</p></div></div>
-          <div class="slot"><div class="slot-time">02:00–02:40</div><div class="slot-body"><h3>Бизнес-блок и дискуссия</h3><p>3–4 представителя бизнеса обозначают отраслевые проблемы и кейсы, после чего следует общая модерируемая дискуссия с экспертами и юридическими компаниями.</p></div></div>
-          <div class="slot"><div class="slot-time">02:40–03:00</div><div class="slot-body"><h3>Завершение</h3><p>Краткие выводы, благодарность участникам, информация об итоговой публикации и общий финальный кадр/скриншот.</p></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Это не вебинар,<br>где один говорит, остальные слушают</h2>
-          <p>Сильная сторона формата — управляемая дискуссия: позиции сталкиваются, уточняются и дополняются реальными задачами бизнеса.</p>
-        </div>
-        <div class="compare">
-          <article class="compare-card">
-            <h3>Обычный вебинар</h3>
-            <ul>
-              <li>готовая презентация и односторонняя подача;</li>
-              <li>общие рекомендации для широкой аудитории;</li>
-              <li>минимум взаимодействия между участниками;</li>
-              <li>мероприятие заканчивается вместе с эфиром.</li>
-            </ul>
-          </article>
-          <article class="compare-card highlight">
-            <h3>Круглый стол «ТОЧКИ ОПОРЫ»</h3>
-            <ul>
-              <li>несколько профессиональных позиций внутри одной темы;</li>
-              <li>конкретные вопросы и кейсы бизнеса;</li>
-              <li>модерируемая дискуссия между участниками;</li>
-              <li>итоговая редакционная публикация после встречи.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="section-head"><h2>Бизнес-аудитория</h2><p>Проект опирается на отрасли, с которыми «ТОЧКА ОПОРЫ» уже работает и на профильных выставках которых распространяется журнал.</p></div>
-        <div class="industries">
-          <article class="industry"><div class="n">01</div><h3>Строительство и недвижимость</h3><p>Девелопмент, подряд, строительные материалы, проектирование, инженерные решения, недвижимость.</p></article>
-          <article class="industry"><div class="n">02</div><h3>Промышленность и энергетика</h3><p>Промышленные предприятия, производители оборудования, инжиниринг, энергетические и нефтегазовые компании.</p></article>
-          <article class="industry"><div class="n">03</div><h3>Безопасность и технологии</h3><p>Интеграторы, IT, технические средства безопасности, цифровая инфраструктура и интеллектуальная собственность.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Что останется<br>после круглого стола</h2>
-          <p>Мы хотим, чтобы участие продолжало работать и после завершения Телемоста.</p>
-        </div>
-        <div class="result-grid">
-          <article class="result-card"><strong>Профессиональный контакт</strong><p>Знакомство и дискуссия с юристами, экспертами и представителями бизнеса из разных отраслей.</p></article>
-          <article class="result-card"><strong>Редакционная публикация</strong><p>Ключевые позиции и выводы участников в итоговом материале бизнес-журнала.</p></article>
-          <article class="result-card"><strong>Видеоматериал</strong><p>Запись мероприятия и возможность использовать собственный экспертный фрагмент в коммуникациях.</p></article>
-          <article class="result-card"><strong>Экспертное позиционирование</strong><p>Спикер представлен не рекламным объявлением, а содержательной профессиональной позицией.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="speaker-placeholder"><div><h3>Состав экспертов формируется</h3><p>Персональные карточки спикеров будут добавляться на эту страницу только после подтверждения участия. Ссылка на сайт при этом останется прежней.</p></div><div class="badge">обновляется</div></div>
-      </div>
-    </section>
-
-    <section id="gallery">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Юридическая экспертиза<br>в архиве «ТОЧКИ ОПОРЫ»</h2>
-          <p>Новый круглый стол продолжает уже существующее направление журнала: в архиве есть интервью с адвокатами и практические юридические материалы для предпринимателей и руководителей компаний.</p>
-        </div>
-        <div class="archive-list">
-          <a class="archive-link" href="https://www.to-inform.ru/index.php/arkhiv/item/zakon-o-prioritete-russkogo-iazyka-chto-izmenilos-dlia-biznesa-s-1-marta-2026" target="_blank" rel="noopener">
-            <div class="meta">№307 · апрель 2026 · юридическая помощь</div>
-            <h3>Закон о приоритете русского языка: что изменилось для бизнеса</h3>
-            <p>Материал Анны Стратулат о новых требованиях к публичной информации, рекламе и брендам.</p>
-          </a>
-          <a class="archive-link" href="https://www.to-inform.ru/index.php/arkhiv/item/zapret-vyvesok-na-inostrannom-iazyke-registratciia-brendov-i-novoe-regulirovanie-kak-biznesu-sebia-zashchitit" target="_blank" rel="noopener">
-            <div class="meta">№308 · июнь 2026 · юридическая помощь</div>
-            <h3>Регистрация брендов и новое регулирование</h3>
-            <p>Юлия Берестнева — о товарных знаках, защите визуальной идентичности и правовых рисках бизнеса.</p>
-          </a>
-          <a class="archive-link" href="https://www.to-inform.ru/index.php/arkhiv/item/elizaveta-seleznyoba-advokat-eto-ne-tolko-iurist" target="_blank" rel="noopener">
-            <div class="meta">№287 · октябрь 2023 · интервью</div>
-            <h3>Адвокат — это не только юрист, но и помощник, защитник и друг</h3>
-            <p>Интервью с к.ю.н. и адвокатом Елизаветой Селезнёвой о договорных спорах, строительстве и защите бизнеса.</p>
-          </a>
-          <a class="archive-link" href="https://www.to-inform.ru/index.php/component/zoo/item/markirovka-reclamy-kak-izbezhat-shtrafov" target="_blank" rel="noopener">
-            <div class="meta">№289 · декабрь 2023 · юридическая помощь</div>
-            <h3>Маркировка рекламы. Как избежать штрафов?</h3>
-            <p>Практический разбор требований к интернет-рекламе с участием юриста Юлии Берестневой.</p>
-          </a>
-        </div>
-        <div class="proofline">
-          <span><strong>Формат:</strong> интервью, экспертные статьи и практические разборы</span>
-          <span><strong>Аудитория:</strong> руководители и B2B-компании</span>
-          <span><strong>Продолжение:</strong> живая дискуссия в формате круглого стола</span>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Вопросы об участии</h2>
-          <p>Основные организационные условия первого круглого стола.</p>
-        </div>
-        <div class="faq">
-          <details open><summary>Сколько стоит участие?</summary><p>Для юридической компании — 15 000 ₽ за участие одного профильного спикера. Для представителя бизнеса — 10 000 ₽. Приглашённые представители юридической науки участвуют как почётные эксперты без организационного взноса.</p></details>
-          <details><summary>Можно ли выбрать тему выступления самостоятельно?</summary><p>Да. Тема согласовывается индивидуально, но должна находиться внутри общей проблематики круглого стола. Мы заранее распределяем направления, чтобы выступления не дублировались.</p></details>
-          <details><summary>Кто будет участвовать?</summary><p>Формируется состав из приглашённых представителей юридической науки, 7–10 юридических компаний и 3–4 представителей бизнеса. Персональные карточки публикуются на сайте только после подтверждения участия.</p></details>
-          <details><summary>Как проходит мероприятие?</summary><p>Закрытый онлайн-формат в Яндекс Телемосте, ориентировочная продолжительность — около трёх часов: открытие, академический блок, практические выступления юридических компаний, бизнес-блок и общая модерируемая дискуссия.</p></details>
-          <details><summary>Что публикуется после?</summary><p>Редакция готовит итоговый материал по ключевым позициям и выводам участников. Также сохраняется видеозапись мероприятия.</p></details>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="wrap">
-        <div class="application-wrap">
-          <aside class="application-info">
-            <div class="eyebrow">Участие в проекте</div>
-            <h2>Предложить тему и оставить заявку</h2>
-            <p>Оставьте контакты и коротко опишите предполагаемую тему выступления или вопрос, который вы хотели бы вынести на круглый стол. Мы свяжемся для согласования формата.</p>
-            <span class="contact-line"><strong>Наталья Грачёва</strong><br>представитель бизнес-журнала «ТОЧКА ОПОРЫ»</span>
-            <a class="contact-line" href="tel:+79308797508">+7 930 879-75-08</a>
-            <a class="contact-line" href="tel:+74957448688">+7 (495) 744-86-88</a>
-            <a class="contact-line" href="mailto:Slachevina@yandex.ru">Slachevina@yandex.ru</a>
-          </aside>
-
-          <form class="application-form" action="https://formsubmit.co/Slachevina@yandex.ru" method="POST">
-            <div id="success-note" class="success-note">Заявка отправлена. Спасибо — редакция свяжется с вами по указанным контактам.</div>
-
-            <input type="hidden" name="_subject" value="Заявка на круглый стол «Право × Бизнес»">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://grachevana-lgtm.github.io/?sent=1#contact">
-            <input type="text" name="_honey" style="display:none">
-
-            <div class="form-grid">
-              <div class="field">
-                <label for="name">ФИО *</label>
-                <input id="name" name="ФИО" type="text" autocomplete="name" required>
-              </div>
-              <div class="field">
-                <label for="company">Компания / организация *</label>
-                <input id="company" name="Компания" type="text" required>
-              </div>
-              <div class="field">
-                <label for="position">Должность</label>
-                <input id="position" name="Должность" type="text">
-              </div>
-              <div class="field">
-                <label for="type">Формат участия *</label>
-                <select id="type" name="Формат участия" required>
-                  <option value="" selected disabled>Выберите вариант</option>
-                  <option>Юридическая компания — 15 000 ₽</option>
-                  <option>Представитель бизнеса — 10 000 ₽</option>
-                  <option>Приглашённый эксперт</option>
-                  <option>Хочу обсудить формат</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="phone">Телефон *</label>
-                <input id="phone" name="Телефон" type="tel" autocomplete="tel" required>
-              </div>
-              <div class="field">
-                <label for="email">E-mail *</label>
-                <input id="email" name="E-mail" type="email" autocomplete="email" required>
-              </div>
-              <div class="field full">
-                <label for="topic">Предполагаемая тема / вопрос</label>
-                <input id="topic" name="Тема выступления" type="text" placeholder="Например: корпоративные споры, M&A, банкротство, строительные риски">
-              </div>
-              <div class="field full">
-                <label for="comment">Комментарий</label>
-                <textarea id="comment" name="Комментарий" placeholder="Коротко расскажите о себе, компании или задаче, которую хотите обсудить"></textarea>
-              </div>
-            </div>
-
-            <label class="consent">
-              <input type="checkbox" required>
-              <span>Отправляя форму, я соглашаюсь на обработку указанных персональных данных для связи по вопросу участия и ознакомлен(а) с <a href="https://www.to-inform.ru/politica.html" target="_blank" rel="noopener">политикой конфиденциальности</a>.</span>
-            </label>
-
-            <button class="submit-btn" type="submit">Отправить заявку</button>
-            <div class="form-note">Заявка поступит Наталье на адрес Slachevina@yandex.ru. При первой отправке сервис формы может запросить однократное подтверждение этого адреса.</div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <div class="foot">
-        <div><strong>ТОЧКА ОПОРЫ</strong><br>Экспертный проект «Право × Бизнес»</div>
-        <div>© 2009–2026 · бизнес-журнал «ТОЧКА ОПОРЫ»</div>
-      </div>
-      <div class="legal-footer">
-        Учредитель и издатель: ООО «АЛЬМЕГА». ОГРН 5157746097504. Издание «ТОЧКА ОПОРЫ». Свидетельство о регистрации СМИ ПИ № ФС77-68094 от 21.12.2016. 
-        Редакция: 129090, г. Москва, пл. Малая Сухаревская, д. 1, стр. 1; для корреспонденции: 111396, г. Москва, а/я 16. 
-        Тел.: +7 (495) 744-86-88. E-mail: <a href="mailto:to@to-inform.ru">to@to-inform.ru</a>. 
-        Сайт: <a href="https://www.to-inform.ru/" target="_blank" rel="noopener">www.to-inform.ru</a>. 
-        Копирование материалов — только по согласованию с редакцией. 
-        <a href="https://www.to-inform.ru/politica.html" target="_blank" rel="noopener">Политика конфиденциальности</a>.
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    (function(){
-      const params = new URLSearchParams(window.location.search);
-      if (params.get('sent') === '1') {
-        const box = document.getElementById('success-note');
-        if (box) box.style.display = 'block';
-        if (history.replaceState) history.replaceState({}, document.title, window.location.pathname + '#contact');
-      }
-    })();
-  </script>
-
+<a class="skip" href="#main">Перейти к содержанию</a>
+<header class="header">
+ <div class="container header-inner">
+  <a href="#top" class="brand" aria-label="ТОЧКА ОПОРЫ — в начало"><span class="brand-symbol" aria-hidden="true">т<span>о</span></span><span>ТОЧКА ОПОРЫ<small>БИЗНЕС-ЖУРНАЛ</small></span></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation"><span>Меню</span><span class="menu-icon" aria-hidden="true"></span></button>
+  <nav id="navigation" aria-label="Основная навигация"><a href="#concept">О проекте</a><a href="#program">Программа</a><a href="#participants">Участие</a><a href="#gallery">Журнал</a><a class="nav-cta" href="#contact">Оставить заявку</a></nav>
+ </div>
+</header>
+<main id="main">
+<section class="hero" id="top" aria-labelledby="hero-title">
+ <div class="container">
+  <div class="hero-top"><p class="eyebrow">Экспертный круглый стол</p><span class="edition">Проект бизнес-журнала «ТОЧКА ОПОРЫ»</span></div>
+  <div class="hero-composition">
+   <h1 id="hero-title"><span class="title-law">ПРАВО<span class="times" aria-hidden="true">×</span></span><span class="title-business"><span class="sr-only"> × </span>БИЗНЕС</span></h1>
+   <div class="hero-side"><span class="small-index">НА ПЕРЕСЕЧЕНИИ<br>ЭКСПЕРТИЗЫ И ПРАКТИКИ</span><div class="hero-side-line"></div><p>Частное право.<br>Судебная практика.<br>Деловые отношения.</p></div>
+  </div>
+  <div class="hero-bottom"><p class="hero-lead">Один стол. Разные позиции.<br><span>Общий фокус — реальные задачи бизнеса.</span></p><div class="hero-actions"><a class="button primary" href="#participants">Выбрать формат участия</a><a class="text-link" href="#program">Изучить программу</a></div></div>
+  <div class="hero-facts"><div><span class="meta-label">Формат</span><strong>Онлайн · Яндекс Телемост</strong></div><div><span class="meta-label">Продолжительность</span><strong>Около 3 часов</strong></div><div><span class="meta-label">Дата встречи</span><strong>Согласовывается</strong></div><a href="#experts" class="status"><span class="status-dot"></span>Состав экспертов формируется</a></div>
+ </div>
+</section>
+<div class="topic-strip" aria-hidden="true"><div>ПРАВО И БИЗНЕС <span>×</span> ЭКСПЕРТНЫЙ ДИАЛОГ <span>×</span> РЕАЛЬНАЯ ПРАКТИКА <span>×</span> ПРАВО И БИЗНЕС <span>×</span> ЭКСПЕРТНЫЙ ДИАЛОГ <span>×</span></div></div>
+<section class="section" id="concept">
+ <div class="container"><p class="eyebrow section-label">01 / О проекте</p>
+  <div class="intro-layout"><h2>Там, где право<br>встречается<br><em>с бизнесом.</em></h2><div class="intro-copy"><p class="large-copy">Юридическая наука, практикующие юристы и руководители компаний — в одной содержательной дискуссии.</p><p>Обсуждаем ключевые тенденции частного права, судебные подходы и деловые отношения через реальные риски и задачи компаний.</p><p>За каждым спикером заранее закрепляется отдельное направление. Позиции дополняют друг друга, а модератор связывает выступления с вопросами бизнеса.</p></div></div>
+  <div class="topics" aria-label="Направления дискуссии"><span>Корпоративное право и M&A</span><span>Коммерческие споры</span><span>Банкротство</span><span>Строительство и недвижимость</span><span>Договорное право</span><span>Интеллектуальная собственность</span><span>Налоги</span></div>
+  <div class="outcome-note"><span class="plus" aria-hidden="true">+</span><p><strong>Диалог продолжится на страницах журнала.</strong> По итогам встречи редакция подготовит материал с ключевыми позициями и выводами участников. Видеозапись сохранит экспертные выступления.</p></div>
+ </div>
+</section>
+<section class="section audience-section" id="audience">
+ <div class="container"><div class="section-heading"><div><p class="eyebrow section-label">02 / Участники диалога</p><h2>Ваше место<br><em>за этим столом.</em></h2></div><p class="section-aside">Для тех, кто принимает решения, защищает интересы компаний и работает с правовыми рисками каждый день.</p></div>
+ <div class="audience-grid">
+  <article><span class="item-number">01</span><h3>Партнёры юридических практик</h3><p>Представить профессиональную позицию и обсудить её с руководителями бизнеса.</p></article>
+  <article><span class="item-number">02</span><h3>Практикующие<br>юристы</h3><p>Поделиться кейсами, специализацией и взглядом на изменения судебной практики.</p></article>
+  <article><span class="item-number">03</span><h3>Собственники<br>и руководители</h3><p>Вынести на обсуждение договорные, корпоративные и регуляторные вопросы компании.</p></article>
+  <article><span class="item-number">04</span><h3>Руководители<br>юридических служб</h3><p>Обменяться опытом с внешними консультантами и обсудить внутренние задачи бизнеса.</p></article>
+ </div>
+ <div class="industry-line"><span class="meta-label">Отраслевой фокус</span><p>Строительство и недвижимость <i>/</i> Промышленность и энергетика <i>/</i> Безопасность и технологии</p></div>
+ </div>
+</section>
+<section class="section program-section" id="program">
+ <div class="container"><div class="section-heading"><div><p class="eyebrow section-label">03 / Программа</p><h2>От позиции —<br><em>к обсуждению.</em></h2></div><div class="program-duration"><strong>≈ 3</strong><span>часа экспертного<br>диалога</span></div></div>
+ <div class="program-note"><span>Предварительная программа</span><p>Время указано от начала встречи. Дата и окончательный регламент будут опубликованы после согласования с приглашёнными экспертами.</p></div>
+ <ol class="agenda">
+  <li><span class="agenda-time">00:00 — 00:07</span><div class="agenda-title"><span class="agenda-num">01</span><h3>Открытие</h3></div><p>Знакомство с участниками, общей темой и правилами дискуссии.</p></li>
+  <li><span class="agenda-time">00:07 — 01:00</span><div class="agenda-title"><span class="agenda-num">02</span><h3>Академический блок</h3></div><p>Планируются выступления 3–4 приглашённых экспертов: научный взгляд на частное право и деловые отношения.</p></li>
+  <li><span class="agenda-time">01:00 — 02:00</span><div class="agenda-title"><span class="agenda-num">03</span><h3>Юридическая практика</h3></div><p>Выступления представителей 7–10 юридических компаний. Каждая тема согласовывается заранее, без дублирования направлений.</p></li>
+  <li><span class="agenda-time">02:00 — 02:40</span><div class="agenda-title"><span class="agenda-num">04</span><h3>Бизнес и дискуссия</h3></div><p>Кейсы и отраслевые вопросы 3–4 представителей бизнеса. Общая модерируемая дискуссия с юристами и экспертами.</p></li>
+  <li><span class="agenda-time">02:40 — 03:00</span><div class="agenda-title"><span class="agenda-num">05</span><h3>Выводы и продолжение</h3></div><p>Ключевые итоги, информация о редакционной публикации и общий финальный кадр.</p></li>
+ </ol>
+ <div class="experts-note" id="experts"><div><span class="status-dot"></span><strong>Состав экспертов формируется</strong></div><p>Имена и персональные карточки появятся только после подтверждения участия.</p></div>
+ </div>
+</section>
+<section class="section participation-section" id="participants">
+ <div class="container"><div class="section-heading"><div><p class="eyebrow section-label">04 / Форматы участия</p><h2>Включайтесь<br>в разговор.</h2></div><p class="section-aside">Выберите свою роль в дискуссии. Темы и направления согласовываются индивидуально.</p></div>
+ <div class="pricing-grid">
+  <article class="price-card"><div class="price-top"><span>Юридическая наука</span><span class="price-index">01</span></div><h3>Приглашённый<br>эксперт</h3><div class="price invitation">По приглашению</div><p class="price-unit">Без организационного взноса</p><ul><li>Профессора и исследователи</li><li>Академический взгляд на тему</li><li>Индивидуально согласованное выступление</li><li>Участие в общей дискуссии</li></ul><p class="price-note">Состав приглашённых экспертов согласовывается.</p><a class="button outline" href="#contact" data-participation="Приглашённый эксперт">Обсудить участие</a></article>
+  <article class="price-card featured"><div class="price-top"><span>7–10 компаний</span><span class="price-index">02</span></div><h3>Юридическая<br>компания</h3><div class="price">15 000 <span>₽</span></div><p class="price-unit">За компанию · один профильный спикер</p><ul><li>Экспертное выступление</li><li>Отдельное профессиональное направление</li><li>Логотип и представление компании</li><li>Упоминание в итоговом материале</li><li>Участие в общей дискуссии</li></ul><p class="price-note">Ориентир — 7–8 минут выступления. Окончательный регламент согласовывается.</p><a class="button dark-button" href="#contact" data-participation="Юридическая компания — 15 000 ₽">Предложить выступление</a></article>
+  <article class="price-card"><div class="price-top"><span>3–4 участника</span><span class="price-index">03</span></div><h3>Представитель<br>бизнеса</h3><div class="price">10 000 <span>₽</span></div><p class="price-unit">За одного участника</p><ul><li>Реальный кейс или проблема отрасли</li><li>Обсуждение с юридическими экспертами</li><li>Упоминание в итоговом материале</li><li>Участие в общей дискуссии</li></ul><p class="price-note">Приоритет — строительство, промышленность, энергетика, безопасность и технологии.</p><a class="button outline" href="#contact" data-participation="Представитель бизнеса — 10 000 ₽">Предложить свой кейс</a></article>
+ </div>
+ <p class="participation-note">Это планируемый состав, а не число оставшихся мест. Направления распределяются заранее, чтобы у каждого участника была своя профессиональная роль.</p>
+ </div>
+</section>
+<section class="section results-section">
+ <div class="container"><div class="section-heading"><div><p class="eyebrow section-label">05 / Результат</p><h2>Эфир закончится.<br><em>Экспертиза останется.</em></h2></div><p class="section-aside">Профессиональные связи и материалы, к которым можно возвращаться после встречи.</p></div>
+ <div class="results-grid"><article><span class="result-icon" aria-hidden="true">01 /</span><h3>Профессиональный контакт</h3><p>Знакомство и прямой диалог с юристами, представителями науки и руководителями компаний.</p></article><article><span class="result-icon" aria-hidden="true">02 /</span><h3>Редакционная публикация</h3><p>Ключевые позиции и выводы участников в итоговом материале бизнес-журнала «ТОЧКА ОПОРЫ».</p></article><article><span class="result-icon" aria-hidden="true">03 /</span><h3>Видеозапись<br>и экспертный контент</h3><p>Запись встречи и возможность использовать собственный фрагмент в профессиональных коммуникациях.</p></article></div>
+ </div>
+</section>
+<section class="section archive-section" id="gallery">
+ <div class="container"><div class="section-heading"><div><p class="eyebrow section-label">06 / Архив журнала</p><h2>Право на страницах<br><em>«ТОЧКИ ОПОРЫ».</em></h2></div><p class="section-aside">Интервью и юридические материалы для предпринимателей. На этой основе мы продолжаем разговор в формате круглого стола.</p></div>
+ <p class="archive-disclaimer">Авторы публикаций в архиве. Их участие в круглом столе не заявлено.</p>
+ <div class="archive-layout">
+ <a class="feature-story" href="https://www.to-inform.ru/index.php/arkhiv/item/zakon-o-prioritete-russkogo-iazyka-chto-izmenilos-dlia-biznesa-s-1-marta-2026" target="_blank" rel="noopener noreferrer"><div class="story-image"><img src="assets/307_22.webp" width="519" height="797" loading="lazy" decoding="async" alt="Анна Стратулат — автор публикации в журнале «ТОЧКА ОПОРЫ»"><span class="story-category">Юридическая помощь</span></div><div class="story-copy"><span class="meta-label">№307 · Апрель 2026</span><h3>Закон о приоритете русского языка: что изменилось для бизнеса</h3><p>Анна Стратулат<br><span>Руководитель юридической компании Stratulat</span></p><span class="story-link">Читать в журнале</span></div></a>
+ <div class="story-list">
+ <a class="story" href="https://www.to-inform.ru/index.php/arkhiv/item/zapret-vyvesok-na-inostrannom-iazyke-registratciia-brendov-i-novoe-regulirovanie-kak-biznesu-sebia-zashchitit" target="_blank" rel="noopener noreferrer"><span class="meta-label">№308 · Июнь 2026</span><h3>Регистрация брендов<br>и новое регулирование</h3><p>Товарные знаки, защита визуальной идентичности и правовые риски бизнеса.</p><div class="story-author"><img src="assets/308_19.webp" width="56" height="56" alt="Юлия Берестнева" loading="lazy" decoding="async"><span>Юлия Берестнева<small>Руководитель Патентного бюро «ВЕРИТА»</small></span></div></a>
+ <a class="story" href="https://www.to-inform.ru/index.php/arkhiv/item/elizaveta-seleznyoba-advokat-eto-ne-tolko-iurist" target="_blank" rel="noopener noreferrer"><span class="meta-label">№287 · Октябрь 2023</span><h3>Адвокат — это не только юрист,<br>но и помощник, защитник и друг</h3><p>Интервью о договорных спорах, строительстве и защите бизнеса.</p><div class="story-author"><img src="assets/287_18.webp" width="56" height="56" alt="Елизавета Селезнёва" loading="lazy" decoding="async"><span>Елизавета Селезнёва<small>Кандидат юридических наук, адвокат</small></span></div></a>
+ <a class="story compact-story" href="https://www.to-inform.ru/index.php/component/zoo/item/markirovka-reclamy-kak-izbezhat-shtrafov" target="_blank" rel="noopener noreferrer"><span class="meta-label">№289 · Декабрь 2023</span><h3>Маркировка рекламы.<br>Как избежать штрафов?</h3><p>Практический разбор с участием юриста Юлии Берестневой.</p><span class="story-link">Читать в журнале</span></a>
+ </div></div>
+ </div>
+</section>
+<section class="section faq-section" id="faq"><div class="container faq-layout"><div><p class="eyebrow section-label">07 / Вопросы и ответы</p><h2>Всё, что нужно<br><em>до встречи.</em></h2><p class="faq-intro">Не нашли ответа?<br><a href="mailto:Slachevina@yandex.ru">Напишите организатору</a></p></div><div class="faq">
+ <details><summary>Когда состоится круглый стол?</summary><div><p>Точная дата согласовывается с ключевыми приглашёнными экспертами. После согласования она будет опубликована на этой странице.</p></div></details>
+ <details><summary>Как проходит встреча?</summary><div><p>Закрытый онлайн-формат в Яндекс Телемосте с записью, модератором и техническим сопровождением. Ориентировочная продолжительность — около трёх часов.</p></div></details>
+ <details><summary>Сколько стоит участие?</summary><div><p>Для юридической компании — 15 000 ₽ за одного профильного спикера. Для представителя бизнеса — 10 000 ₽. Приглашённые представители юридической науки участвуют без организационного взноса.</p></div></details>
+ <details><summary>Можно ли предложить свою тему?</summary><div><p>Да. Тема согласовывается индивидуально в рамках общей проблематики круглого стола. Направления распределяются заранее, чтобы выступления не дублировались.</p></div></details>
+ <details><summary>Кто будет участвовать?</summary><div><p>Планируется участие приглашённых представителей юридической науки, 7–10 юридических компаний и 3–4 представителей бизнеса. Имена публикуются только после подтверждения участия.</p></div></details>
+ <details><summary>Что останется после мероприятия?</summary><div><p>Редакция подготовит итоговый материал с ключевыми позициями участников. Сохранится видеозапись; собственный экспертный фрагмент можно будет использовать в профессиональных коммуникациях.</p></div></details>
+ </div></div></section>
+<section class="section contact-section" id="contact"><div class="container"><p class="eyebrow section-label">08 / Присоединиться</p><div class="contact-heading"><h2>Ваша экспертиза.<br><em>Наш общий разговор.</em></h2><span class="contact-cross" aria-hidden="true">×</span></div>
+ <div class="contact-layout"><div class="contact-info"><p class="large-copy">Предложите тему,<br>с которой стоит разобраться.</p><p>Оставьте контакты и коротко опишите кейс или вопрос. Организатор свяжется с вами для согласования формата участия.</p><div class="organizer"><strong>Наталья Грачёва</strong><span>Представитель бизнес-журнала «ТОЧКА ОПОРЫ»</span></div><div class="contact-phones"><span class="meta-label">Телефоны</span><a href="tel:+79308797508">+7 930 879-75-08</a><a href="tel:+74957448688">+7 (495) 744-86-88</a></div><div class="contact-email"><span class="meta-label">E-mail</span><a href="mailto:Slachevina@yandex.ru">Slachevina@yandex.ru</a></div><a class="magazine-link" href="https://www.to-inform.ru/" target="_blank" rel="noopener noreferrer">Сайт журнала · to-inform.ru</a></div>
+ <form class="application-form" action="https://formsubmit.co/Slachevina@yandex.ru" method="POST">
+ <input type="hidden" name="_subject" value="Заявка на круглый стол «Право × Бизнес»"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://grachevana-lgtm.github.io/#contact"><input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+ <p class="form-caption">Заявка на участие <span>* Обязательные поля</span></p>
+ <div class="form-grid"><div class="field"><label for="name">ФИО *</label><input id="name" name="ФИО" autocomplete="name" required maxlength="150" placeholder="Как к вам обращаться"></div><div class="field"><label for="company">Компания / организация *</label><input id="company" name="Компания" autocomplete="organization" required maxlength="200" placeholder="Название компании"></div><div class="field"><label for="position">Должность</label><input id="position" name="Должность" autocomplete="organization-title" maxlength="150" placeholder="Ваша роль в компании"></div><div class="field"><label for="type">Формат участия *</label><select id="type" name="Формат участия" required><option value="" selected disabled>Выберите формат</option><option>Юридическая компания — 15 000 ₽</option><option>Представитель бизнеса — 10 000 ₽</option><option>Приглашённый эксперт</option><option>Хочу обсудить формат</option></select></div><div class="field"><label for="phone">Телефон *</label><input id="phone" name="Телефон" type="tel" autocomplete="tel" required maxlength="40" placeholder="+7 ___ ___-__-__"></div><div class="field"><label for="email">E-mail *</label><input id="email" name="E-mail" type="email" autocomplete="email" required maxlength="254" placeholder="name@company.ru"></div><div class="field full"><label for="topic">Тема выступления / вопрос</label><input id="topic" name="Тема выступления" maxlength="500" placeholder="Например: корпоративные споры или строительные риски"></div><div class="field full"><label for="comment">Комментарий</label><textarea id="comment" name="Комментарий" rows="3" maxlength="4000" placeholder="Расскажите о кейсе или задаче, которую хотите обсудить"></textarea></div></div>
+ <label class="consent"><input id="consent" type="checkbox" name="Согласие на обработку данных" value="Предоставлено" required><span>Соглашаюсь на обработку указанных персональных данных для связи по вопросу участия и ознакомлен(а) с <a href="https://www.to-inform.ru/politica.html" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a>.</span></label>
+ <button class="button primary submit-button" type="submit">Отправить заявку</button><p class="form-feedback" role="status" aria-live="polite" hidden></p><p class="form-note">Можно также отправить тему и контакты напрямую на <a href="mailto:Slachevina@yandex.ru">Slachevina@yandex.ru</a>.</p>
+ </form></div></div></section>
+</main>
+<footer><div class="container"><div class="footer-top"><a class="brand" href="#top"><span class="brand-symbol" aria-hidden="true">т<span>о</span></span><span>ТОЧКА ОПОРЫ<small>ВАШ ГИД В ПРОФЕССИОНАЛЬНОЙ АУДИТОРИИ</small></span></a><div class="footer-links"><a href="https://www.to-inform.ru/" target="_blank" rel="noopener noreferrer">Журнал</a><a href="#contact">Контакты</a><a href="#top">В начало</a></div></div><div class="legal-footer"><p>Учредитель и издатель: ООО «АЛЬМЕГА». ОГРН 5157746097504.<br>Издание «ТОЧКА ОПОРЫ». Свидетельство о регистрации СМИ ПИ № ФС77-68094 от 21.12.2016.</p><p>Редакция: 129090, г. Москва, пл. Малая Сухаревская, д. 1, стр. 1.<br>Для корреспонденции: 111396, г. Москва, а/я 16.<br><a href="tel:+74957448688">+7 (495) 744-86-88</a> · <a href="mailto:to@to-inform.ru">to@to-inform.ru</a></p></div><div class="footer-bottom"><span>© 2009–2026 · Бизнес-журнал «ТОЧКА ОПОРЫ»</span><span>Копирование материалов — по согласованию с редакцией.</span><a href="https://www.to-inform.ru/politica.html" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a></div><div class="footer-wordmark" aria-hidden="true">ПРАВО × БИЗНЕС</div></div></footer>
 </body>
 </html>
